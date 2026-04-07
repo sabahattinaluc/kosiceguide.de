@@ -1,21 +1,264 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kosice Guide</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: system-ui, -apple-system, sans-serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #f8f7f4; color: #2c2c2c; }
-  .container { text-align: center; padding: 2rem; }
-  h1 { font-size: 2.5rem; font-weight: 300; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-  p { font-size: 1.1rem; color: #666; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Košice Guide — Your curated insider's guide to Košice, Slovakia. Discover the best places to explore, eat, drink, and stay in Central Europe's hidden gem.">
+  <title>Košice Guide — Your Curated Guide to Košice, Slovakia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-  <h1>Kosice Guide</h1>
-  <p>Coming soon.</p>
-</div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Košice Guide — Home">Košice Guide</a>
+      <ul class="nav__links">
+        <li><a href="explore.html" class="nav__link">Explore</a></li>
+        <li><a href="eat-drink.html" class="nav__link">Eat &amp; Drink</a></li>
+        <li><a href="do.html" class="nav__link">Do</a></li>
+        <li><a href="stay.html" class="nav__link">Stay</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <!-- Mobile Overlay -->
+    <div class="nav__mobile-overlay" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <button class="nav__mobile-close" aria-label="Close menu">&times;</button>
+      <a href="explore.html" class="nav__link">Explore</a>
+      <a href="eat-drink.html" class="nav__link">Eat &amp; Drink</a>
+      <a href="do.html" class="nav__link">Do</a>
+      <a href="stay.html" class="nav__link">Stay</a>
+      <a href="about.html" class="nav__link">About</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1565034836584-1e3b9a7fc2e7?w=1600&q=80');" aria-label="Košice city skyline">
+      <div class="hero__content">
+        <h1 class="hero__headline">Discover Košice,<br>Central Europe's Hidden Gem</h1>
+        <p class="hero__tagline">Hand-picked recommendations for the discerning traveller. Authentic Košice experiences, not generic tourism.</p>
+        <a href="explore.html" class="btn btn-primary">Explore Košice</a>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Košice?</h2>
+        </div>
+        <div class="editorial">
+          <div class="editorial__image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Historic main street of Košice with baroque architecture" loading="lazy" width="800" height="450">
+          </div>
+          <div class="editorial__text">
+            <h3>A City with Soul</h3>
+            <p>Košice is Slovakia's second-largest city and its cultural heartbeat. With a beautifully preserved medieval old town, a thriving arts scene, and some of the best food in Central Europe, it rewards those who look beyond the obvious destinations.</p>
+            <p>We've walked every street, eaten at every restaurant we recommend, and spoken with locals who share their city with generosity and pride. This guide is the result — curated, not algorithmic.</p>
+            <a href="about.html" class="btn btn-ghost">Our Story &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Listings -->
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="featured-heading">Editor's Picks</h2>
+        </div>
+        <div class="listings-grid">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1571990048139-4e28md38c4c?w=600&q=80" alt="St. Elizabeth Cathedral at dusk" loading="lazy" width="600" height="338">
+              <span class="card__category">Architecture</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">St. Elizabeth Cathedral</h3>
+              <p class="card__description">Slovakia's largest Gothic church. The altar piece by Master MS is worth the trip alone.</p>
+              <div class="card__meta">
+                <span>Monument</span>
+                <span>&bull;</span>
+                <span>Old Town</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Cozy traditional Slovak restaurant interior" loading="lazy" width="600" height="338">
+              <span class="card__category">Restaurant</span>
+              <span class="badge badge-trending" style="position:absolute;top:8px;right:8px;">Trending</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Hostinec &Scaron;upica</h3>
+              <p class="card__description">Traditional Slovak comfort food in a candlelit cellar. Book ahead — this place fills up fast.</p>
+              <div class="card__meta">
+                <span>$$ &bull; Slovak</span>
+                <span>&bull;</span>
+                <span>Old Town</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=600&q=80" alt="Aerial view of Košice old town rooftops" loading="lazy" width="600" height="338">
+              <span class="card__category">Experience</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Košice Walking Tour</h3>
+              <p class="card__description">Two-hour guided walk through 750 years of history. Locals say it's the best introduction to the city.</p>
+              <div class="card__meta">
+                <span>Tour</span>
+                <span>&bull;</span>
+                <span>Daily</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=600&q=80" alt="Boutique hotel corridor with warm lighting" loading="lazy" width="600" height="338">
+              <span class="card__category">Stay</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Hotel Bankov</h3>
+              <p class="card__description">A 16th-century mining manor on a hill above the city. Peaceful, historic, and utterly unique.</p>
+              <div class="card__meta">
+                <span>$$$ &bull; Boutique</span>
+                <span>&bull;</span>
+                <span>Outskirts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&q=80" alt="Craft beer tasting in an industrial Košice brewery" loading="lazy" width="600" height="338">
+              <span class="card__category">Nightlife</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">Košice Craft Beer Scene</h3>
+              <p class="card__description">From the historic Schreier Brewery to tiny taprooms tucked behind courtyards — a guide to the best pours in the city.</p>
+              <div class="card__meta">
+                <span>Bars</span>
+                <span>&bull;</span>
+                <span>Various</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="card">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=600&q=80" alt="Košice art museum facade at golden hour" loading="lazy" width="600" height="338">
+              <span class="card__category">Culture</span>
+            </div>
+            <div class="card__content">
+              <h3 class="card__title">East Slovak Gallery</h3>
+              <p class="card__description">Four floors of Slovak and Central European art in a beautifully restored burgher house. Free on Sundays.</p>
+              <div class="card__meta">
+                <span>Museum</span>
+                <span>&bull;</span>
+                <span>Art & Culture</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore CTA -->
+    <section class="section" style="background: var(--color-neutral-light);" aria-label="Explore Košice">
+      <div class="container" style="text-align: center;">
+        <h2>Ready to Explore?</h2>
+        <p class="body-large text-secondary" style="max-width: 600px; margin: var(--space-md) auto var(--space-xl);">Six pages of hand-picked recommendations across all categories. Find your perfect Košice experience.</p>
+        <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;">
+          <a href="explore.html" class="btn btn-primary">Explore</a>
+          <a href="eat-drink.html" class="btn btn-secondary">Eat &amp; Drink</a>
+          <a href="stay.html" class="btn btn-secondary">Where to Stay</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="newsletter-heading">
+      <div class="container">
+        <div class="newsletter__inner">
+          <h2 id="newsletter-heading">The Košice Letter</h2>
+          <p>New discoveries, seasonal guides, and things most portals miss — once a month, no noise.</p>
+          <form class="newsletter__form" action="#" method="post" aria-label="Newsletter signup">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input type="email" id="newsletter-email" name="email" class="newsletter__input" placeholder="your@email.com" required autocomplete="email">
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <h4>Košice Guide</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+            <li><a href="about.html#press">Press</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="explore.html">Sights & Landmarks</a></li>
+            <li><a href="eat-drink.html">Restaurants & Bars</a></li>
+            <li><a href="do.html">Activities</a></li>
+            <li><a href="stay.html">Accommodation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 Košice Guide. All rights reserved.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
